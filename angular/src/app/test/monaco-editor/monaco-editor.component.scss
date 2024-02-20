@@ -1,0 +1,94 @@
+.container {
+  height: 90vh;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border: 1.5px solid rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+select {
+  margin-left: 5px;
+  padding: 7px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+select option {
+  background-color: #dddffc;
+  color: #570a39;
+}
+
+button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: #4CAF50;
+  /* Green */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Style for the editor container */
+.editor-container {
+  flex-grow: 1;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1px;
+}
+
+.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.run-button {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-icon {
+  margin-left: 2px;
+}
+.submit-btn{
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

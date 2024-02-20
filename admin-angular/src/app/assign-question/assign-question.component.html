@@ -1,0 +1,91 @@
+<section class="assign-section">
+  <!-- First mat-card -->
+  <mat-card class="question-section">
+    <mat-card-content>
+      <div class="table">
+        <h3>Question List</h3>
+
+        <div class="table-container">
+          <table id="questionsDisplay" (click)="onTableRowSelect($event)">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Weightage</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let question of displayQuestions">
+                <td>{{ question.title }}</td>
+                <td>{{ question.weightage }}</td>
+                <td>{{ question.type }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="table">
+        <h3>Selected Question</h3>
+        <div class="table-container">
+          <table id="selectedQuestions" (click)="onTableRowRemove($event)">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Weightage</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let question of selectedQuestions">
+                <td>{{ question.title }}</td>
+                <td>{{ question.weightage }}</td>
+                <td>{{ question.type }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="candidate-section">
+    <div class="upload-candidate">
+      <h3>{{ displayString }}</h3>
+      <h5>Excel with candidate email</h5>
+      <input
+        color="primary"
+        class="button"
+        type="file"
+        accept=".xlsx, .xls"
+        (change)="onFileChange($event)"
+      />
+    </div>
+    <div class="table-candidate">
+      <div class="candidate-heading">
+        <h3>Candidate List</h3>
+        <button matTooltip="Add" (click)="add()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="table-container">
+        <table (click)="onTableRemove($event)">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let candidate of candidates; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ candidate.email }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </mat-card>
+</section>
+<button mat-raised-button class="button-footer" (click)="onSubmit()">
+  Assign Question
+</button>

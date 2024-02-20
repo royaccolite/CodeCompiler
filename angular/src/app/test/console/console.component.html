@@ -1,0 +1,23 @@
+<div class="navbar-container">
+  <div class="output-container">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>Output</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="mysql-output-table" [innerHTML]="formatTable(sqlRunResults)" rows="10" cols="50" readonly *ngIf="selectedLanguage === 'mysql'"></div>
+    <textarea rows="10" cols="50" readonly *ngIf="selectedLanguage !== 'mysql'">{{ runResults.join('\n') }}</textarea>
+  </div>
+
+  <div class="custom-input-container">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span *ngIf="selectedLanguage !== 'mysql'">Custom Input</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- <textarea [(ngModel)]="customInput" (input)="onCustomInputChange()" rows="4" cols="50">{{ customInput }}</textarea> -->
+    <textarea  *ngIf="selectedLanguage !== 'mysql'"[(ngModel)]="customInput" (input)="onCustomInputChange()" rows="4" cols="50" [ngModel]></textarea>
+  </div>
+</div>
+

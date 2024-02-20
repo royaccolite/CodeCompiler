@@ -1,0 +1,118 @@
+@import "../app.component.scss";
+
+.assign-section {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  mat-card {
+    height: 475px;
+  }
+  .question-section {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .table-container {
+    max-height: 150px;
+    overflow-x: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  table {
+    border-collapse: collapse;
+    overflow-y: auto;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tbody {
+    height: 20px;
+  }
+}
+.button-footer {
+  margin-left: 35%;
+  margin-top: 10px;
+  width: 30%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button-footer:hover {
+  color: blue;
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 175px;
+}
+
+.candidate-section {
+  width: 45%;
+
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  .upload-candidate {
+    width: 100%;
+    text-align: center;
+  }
+  .table-candidate {
+    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .candidate-heading {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .table-container {
+      max-height: 215px;
+      cursor: pointer;
+    }
+    button {
+      border: none;
+      border-radius: 5px;
+      width: 40px;
+      background-color: rgb(14, 14, 255);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mat-icon {
+        margin-bottom: 7px;
+        margin-right: 5px;
+        font-size: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-row {
+  font-size: 15px;
+  height: 20px;
+}
+
+/* Add this CSS in your styles.css (or your component's style file) */
+
+/* Common styling for both toolbars */
+.mat-toolbar {
+  background-color: #ffffff;
+  /* Set your desired background color */
+  color: rgb(0, 0, 0);
+  /* Set text color to contrast with the background */
+  min-height: 35px !important;
+}
+
+/* Styling for Output Toolbar */
+.output-container .mat-toolbar-row {
+  height: 20px;
+  padding-top: 7px;
+}
+
+.output-container textarea {
+  height: 41vh;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+
+.custom-input-container textarea {
+  height: 41vh;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.output-content div {
+  height: 41vh;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  overflow: auto; /* Add this line to enable vertical scrollbar */
+  white-space: nowrap;
+  resize: none;
+}
+.mysql-output-table {
+  max-width:400px;
+  overflow-x: auto;
+  padding: 5px;
+  border: #ccc;
+  height:fit-content;
+}
+.output-container .mat-toolbar-row {
+  height: 20px;
+}
+.mysql-output-table table {
+  border: none;
+}
+.mysql-output-table table td, .mysql-output-table table th {
+  border: none;
+}
+
+
+

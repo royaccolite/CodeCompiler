@@ -1,0 +1,25 @@
+// Add the font-family styles
+:root {
+    --sb-ui-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Cantarell, sans-serif;
+    --sb-code-font-family: Menlo, 'Cascadia Code', Consolas, 'Liberation Mono', monospace;
+  }
+  
+  // Apply the font-family to the body or specific elements as needed
+  body {
+    font-family: var(--sb-ui-font-family);
+  }
+  
+  code {
+    font-family: var(--sb-code-font-family);
+  }
+  
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;    overflow: hidden; }
+body { margin: 0;}
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

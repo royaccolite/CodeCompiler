@@ -1,0 +1,26 @@
+<div *ngIf="!isButtonClicked" [class.fade-out]="isButtonClicked">
+<div class="feedback-container">
+ 
+    <h2>Provide Feedback</h2>
+
+    <div class="description-container">
+        <textarea id="description" placeholder="Enter your feedback here..."
+            [(ngModel)]="description" ></textarea>
+    </div>
+
+    <div class="rating-container">
+        <label for="rating">Rating:</label>
+        <mat-button-toggle-group id="rating" [(ngModel)]="rating">
+          <mat-button-toggle *ngFor="let star of stars" [value]="star">
+            <mat-icon class="star" [ngClass]="{'filled': star <= rating}">star</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      
+
+    <div class="button-container">
+        <button mat-raised-button class="submit-button" (click)="submitFeedback()">Submit Feedback</button>
+        <button mat-raised-button class="skip-button" (click)="onButtonClick()">Skip</button>
+    </div>
+</div>
+</div>

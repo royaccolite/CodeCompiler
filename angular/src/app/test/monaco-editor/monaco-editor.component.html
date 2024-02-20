@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="toolbar">
+    <!-- <div class="select-container">
+      <label for="languageSelect">Language:</label>
+      <select id="languageSelect" [(ngModel)]="selectedLanguage" (change)="onLanguageChange()">
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="mysql">mysql</option>
+      </select>
+    </div> -->
+    <div class="select-container">
+      <label for="languageSelect">Language:</label>
+      <select id="languageSelect"  *ngIf="templatesExist()" [(ngModel)]="selectedLanguage" (change)="onLanguageChange()">
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+      </select>
+      <select id="languageSelect"  *ngIf="!templatesExist()" [(ngModel)]="selectedLanguage" (change)="onLanguageChange()">
+        <option value="mysql">mysql</option>
+      </select>
+    </div>
+    
+    <div class="select-container">
+      <label for="themeSelect">Theme:</label>
+      <select id="themeSelect" [(ngModel)]="selectedTheme" (change)="onThemeChange()">
+        <option value="vs-dark">Dark</option>
+        <option value="vs-light">Light</option>
+      </select>
+      <!-- <button (click)=" saveToLocalStorage()">Save Code</button>
+      <button (click)="clearLocalStorage()">Reset Code</button> -->
+      <button mat-raised-button color="primary" class="run-button" (click)="onRun()">Run<mat-icon
+          class="arrow-icon">arrow_forward</mat-icon></button>
+      <button class="submit-btn" mat-raised-button (click)="onSubmit()">Submit</button>
+      <!-- <button (click)="toggleFullscreen()">Toggle Fullscreen</button> -->
+
+
+    </div>
+    <!-- <button (click)="toggleFullScreen()">Toggle Full Screen</button>
+      <button *ngIf="isFullScreen" (click)="exitFullScreen()">
+        Exit Full Screen
+      </button> -->
+  </div>
+  <div #editorContainer class="editor-container" [ngStyle]="{ 'height.px': isFullScreen ? '100vh' : '365' }"></div>
+</div>

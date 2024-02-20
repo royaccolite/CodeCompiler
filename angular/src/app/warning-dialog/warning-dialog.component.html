@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Warning!</h2>
+    <mat-dialog-content>
+      <p>Are you sure you want to end the test?</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-button (click)="onConfirmClick()" style="background-color: red;color: white;">End Test</button>
+    </mat-dialog-actions>

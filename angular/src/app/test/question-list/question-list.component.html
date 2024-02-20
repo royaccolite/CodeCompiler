@@ -1,0 +1,65 @@
+<mat-toolbar color="primary" class="custom-toolbar">
+  <div class="head">
+    <div class="questions">
+      <mat-button-toggle *ngFor="let question of questions; let i = index" [value]="question"
+        (click)="onQuestionSelected(question)" [class.highlighted]="question === selectedQuestion" class="Question">
+        {{ i + 1 }}
+      </mat-button-toggle>
+    </div>
+
+
+    
+    <div class="timer">
+      <app-timer [candidateId]="candidateId"></app-timer>
+    </div>
+    <div class="end-test">
+      <button type="submit" class="submit-button" id="endButton" (click)="openWarningDialog()">End Test</button>
+    </div>
+  </div>
+</mat-toolbar>
+<div class="parent">
+  <div class="left">
+
+    <mat-tab-group>
+      <!-- <mat-tab label="Explorer">
+        <app-explorer></app-explorer>
+      </mat-tab> -->
+      <mat-tab label="Problem Statement">
+        <ng-template mat-tab-label>
+          <!-- <span matTooltip="Problem Statement">{{ selectedQuestion ? selectedQuestion.title : 'Problem Statement'
+            }}</span> -->
+            <span>Description</span>
+        </ng-template>
+        <div class="problem-section scrollable-container" *ngIf="selectedQuestion">
+          <h2>{{ selectedQuestion.title }}</h2>
+          <p>{{ selectedQuestion.description }}</p>
+          <div class="TestCase">
+            <div *ngFor="let testCase of selectedQuestion.testCases; let i = index">
+              <h2>Example {{ i + 1 }}:</h2>
+              <h3>Input:</h3>
+              <h4>{{ testCase.input }}</h4>
+              <h3>Output:</h3>
+              <h4>{{ testCase.output }}</h4>
+              <br><br>
+            </div>
+          </div>
+          <p>Copyright ©️ 2024 Accolite All rights reserved</p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div class="right" [ngStyle]="{ 'width.px': rightWidth }">
+    <app-monaco-editor [questionId]="selectedQuestionId" [candidateId]="candidateId"
+      [selectedLanguage]="selectedLanguage" [consoleContent]="consoleContent"
+      (languageChanged)="onLanguageChange($event)"
+      (contentFromLocalStorage)="onContentFromLocalStorage($event)">  
+    </app-monaco-editor>
+    <app-console></app-console>
+    
+    <!-- <app-monaco-editor [questionId]="selectedQuestionId" [candidateId]="candidateId"
+        [selectedLanguage]="selectedLanguage" [consoleContent]="consoleContent">
+    </app-monaco-editor>
+    <app-console></app-console> -->
+  </div>
+</div>

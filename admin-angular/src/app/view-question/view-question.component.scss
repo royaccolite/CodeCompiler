@@ -1,0 +1,95 @@
+@import "../app.component.scss";
+
+.view {
+  margin-top: 15px;
+  height: 500px;
+}
+
+.question-table {
+  margin: 0 auto;
+  width: 90%;
+  height: 414px;
+  overflow-y: auto;
+  .button-group {
+    display: flex;
+    justify-content: space-evenly;
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font-size: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+  .question-header {
+    display: flex;
+    margin-top: 10px;
+    height: 30px;
+    width: 100%;
+    justify-content: space-between;
+    select {
+      width: 20%;
+      font-size: 16px;
+    }
+    button {
+      border: none;
+      border-radius: 5px;
+      width: 40px;
+      background-color: rgb(14, 14, 255);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mat-icon {
+        margin-bottom: 7px;
+        margin-right: 5px;
+        font-size: 30px;
+      }
+    }
+  }
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    thead {
+      text-transform: uppercase;
+    }
+
+    tbody {
+      height: 20px;
+    }
+  }
+}
+.button-footer {
+  margin-left: 35%;
+  margin-top: 20px;
+  width: 30%;
+  text-transform: uppercase;
+}
+
+.empty-section {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.view-section {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

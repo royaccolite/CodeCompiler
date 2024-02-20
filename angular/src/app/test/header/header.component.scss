@@ -1,0 +1,35 @@
+.head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    align-items: self-start;
+}
+
+.timer {
+    color: white;
+    margin-top: 1%;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mat-toolbar.mat-primary {
+    background: linear-gradient(to right, #c941eb, #1330af);
+    color: white;
+}
+
+.custom-toolbar {
+    height: 50px;
+}

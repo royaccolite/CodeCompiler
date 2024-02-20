@@ -1,0 +1,36 @@
+<!-- <div class="login-container">
+  <div class="login-card">
+    <div class="background-logo"></div>
+    <div class="login-header">
+      <h2>Login</h2>
+    </div>
+
+    <div class="login-content">
+      <form class="login-form">
+        <label for="userId">Enter your Email:</label>
+        <input type="text" id="userId" [(ngModel)]="userId" name="userId" required (click)="clearErrorMessage()">
+        <div *ngIf="userIdMessage" class="error-message">{{ userIdMessage }}</div>
+        <button (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="login-container">
+  <div class="login-card">
+    <div class="background-logo"></div>
+    <div class="login-header">
+      <h2>Login</h2>
+    </div>
+
+    <div class="login-content">
+      <form class="login-form">
+        <label for="email">Enter your Email:</label>
+        <input type="text" id="email" [(ngModel)]="email" name="email" required (click)="clearErrorMessage()">
+        <div *ngIf="emailMessage" class="error-message">{{ emailMessage }}</div>
+        <button (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

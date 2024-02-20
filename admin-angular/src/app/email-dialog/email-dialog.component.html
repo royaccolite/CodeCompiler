@@ -1,0 +1,10 @@
+<div class="email-section">
+  <mat-form-field>
+    <mat-label>Candidate Email</mat-label>
+    <input matInput [(ngModel)]="email" />
+  </mat-form-field>
+  <div class="button-group">
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="email">Ok</button>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<mat-card class="view">
+  <section class="question-table">
+    <div class="question-header">
+      <select (change)="onChange()" [(ngModel)]="type">
+        <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+      </select>
+
+      <button matTooltip="Add" routerLink="/create-question">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="view-section" *ngIf="questions.length == 0">
+      <div class="empty-section">
+        <p>Zero entries so far</p>
+        <div class="icon">🚫</div>
+      </div>
+    </div>
+    <table *ngIf="questions.length != 0">
+      <thead>
+        <tr>
+          <th>INDEX</th>
+          <th>QUESTION TITLE</th>
+          <th>Question Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let question of questions; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ question.title }}</td>
+
+          <td>
+            {{ question.type }}
+          </td>
+          <td>
+            <div class="button-group">
+              <button matTooltip="View" (click)="openDialog(question)">
+                <mat-icon>remove_red_eye</mat-icon>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</mat-card>

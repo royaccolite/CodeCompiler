@@ -1,0 +1,67 @@
+/* feedback.component.scss */
+
+.feedback-container {
+    max-width: 500px; /* Adjust the maximum width of the card */
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  .rating-container {
+    margin-bottom: 20px;
+    margin-left:65px;
+  }
+  
+  .description-container {
+    margin-bottom: 20px;
+  
+    textarea {
+      width: 95%;
+      height: 150px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      resize: vertical;
+      font-size: 14px;
+      resize: none;
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: baseline;
+    
+  }
+  .rating-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 24px; /* Adjust the size of the stars as needed */
+    color:whitesmoke; /* Set the color of the stars (here using gold/yellow) */
+    margin: 0 2px; /* Adjust the spacing between stars as needed */
+  }
+  
+  .filled {
+    color: blueviolet; /* Set the color of the filled stars (same as unfilled stars for simplicity) */
+  }
+  .button-container{
+    button {
+      &.submit-button {
+        background-color: blue; /* Set your desired color */
+        color: white;
+      }
+  
+      &.skip-button {
+        background-color: blue; /* Set your desired color */
+        color: white;
+      }
+    }
+  }
